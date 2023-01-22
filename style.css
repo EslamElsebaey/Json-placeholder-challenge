@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    font-family:  system-ui;
+}
+.container{
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+}
+.content{
+  
+    position: relative;
+}
+.users{
+    width: 30%;
+    padding: 30px 0;
+    height: 100vh;
+    overflow: auto;
+    background-color: aliceblue;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+  
+.posts{
+    padding: 30px 0 50px 0;
+    position: absolute;
+    width: 70%;
+    left: 30%;
+    width: 70% ;
+    background-color: rgb(217, 237, 255);
+}
+.user:first-child{
+    margin-top: 0;
+}
+.users-details{
+    width: 90%;
+    margin: 0 auto;
+}
+.user{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.user h3:first-child{
+    text-transform: capitalize;
+}
+.user h3 {
+    font-size: 20px;
+}
+
+
+.posts-details{
+   width: 90%;
+   margin: 0 auto;
+}
+.post{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+    margin-top: 15px;
+}
+.post h3 {
+    margin-bottom: 10px;
+}
+.post:first-child{
+    margin-top: 0;
+}
+.selected{ 
+    border: 4px solid rgb(75 170 255) ;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .users-details{
+        width: 100%;
+    }
+    .posts-details{
+        width: 93%;
+    }
+    .users{
+        width: 35%;
+        padding : 30px 10px ;
+    }
+    .posts{
+        width: 65%;
+        left: 35%;
+    }
+}
+
+@media screen and (max-width : 992px) {
+    .users{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .user{
+        padding-left: 0;
+        padding: 15px ;
+        margin-left: 20px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .user h3{
+        font-size: 17px;
+    }
+    .posts{
+        width: auto;
+        left: 0;
+        position: static;
+        background-color: aliceblue;
+    }
+    .container{
+        flex-direction: column;
+        position: static;
+        background-color: aliceblue;
+    }
+    .users-details{
+        display: flex;
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+    }
+    .posts-details{
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width : 768px) {
+    .post h3 {
+        font-size: 17px;
+    }
+    .post h4 {
+        font-size: 16px;
+    }
+    .user{
+        padding: 10px;
+    }
+    .user h3 {
+        font-size: 16px;
+    }
+    .posts{
+        padding-top: 0;
+        margin-top: 15px;
+    }
+    .users{
+        padding: 20px 0;
+    }
+}
